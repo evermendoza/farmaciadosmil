@@ -1,0 +1,608 @@
+/*============= RESETS =============*/
+/*
+>> Colors to use
+  Green: #0088037
+  White: #fefce6
+  GrassGreen: #7ed957
+  White: #f5f5ef
+  
+*/
+
+/*-- iPhone X Remove Gutters
+Ignore W3C Validation error for this style. --*/
+html {
+  padding: env(safe-area-inset);
+}
+
+/*-- Prevent Horizontal Scrolling & Font Style --*/
+html, body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+}
+.parallax-home {
+  width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(45deg, #7ED56F, #55C57A, #23D5AB, #28B485, #267e42, #257840);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/*-- Turquoise Theme Color Text --*/
+.text-nuno {
+  color: #1EBBA3;
+}
+
+/*-- Nav Scrolling Offset --*/
+.offset:before {
+  content: "";
+  display: block;
+  height: 4.05rem;
+  margin-top: -4.05rem;
+}
+
+/*-- Optional: Add Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*-- Remove Blue Browser Outline Around Buttons in Chrome --*/
+a:focus,
+button:focus {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Pointer Cursor On Links & Buttons --*/
+a, .btn, button {
+   cursor: pointer!important;
+   transition: all .4s ease;
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar {
+  padding: .7rem 1rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, 0.7)!important;
+}
+.navbar-brand img {
+  height: 2rem;
+}
+.custom-toggler-icon {
+  color: white;
+  font-size: 1.6rem;
+}
+.navbar-nav li {
+  padding-right: .8rem;
+}
+.navbar-nav .nav-link {
+  color: white;
+  padding-top: .8rem;
+  transition: all .4s ease;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #1ebba3;
+  transition: all .4s ease;
+}
+.navbar.solid,
+.navbar.solid-toggle {
+  background: rgba(0, 0, 0, 0.7)!important;
+  transition: background-color 1s ease 0s;
+}
+
+/*============= LANDING PAGE =============*/
+
+/*-- Parallax Landing Page Section --*/
+.parallax-home {
+  height: 100vh;
+}
+
+/*-- Landing Page Caption --*/
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%; /* Change position of langing page text. */
+  z-index: 1;
+}
+.caption h1 {
+  font-size: 4.5rem;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+}
+.caption h3 {
+  font-size: 2.5rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 2rem;
+}
+.btn-lg {
+  border-width: medium;
+  padding: .8rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+/*-- Bouncing Down Arrow --*/
+.arrow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+}
+a.down-arrow .svg-inline--fa {
+  color: white;
+  font-size: 2.2rem;
+  opacity: .3;
+}
+a.down-arrow .svg-inline--fa:hover {
+  opacity: .8;
+}
+
+/*============= FEATURES SECTION =============*/
+
+.btn-sm {
+  border-width: medium;
+  border-radius: 0;
+  padding: .5rem 1.1rem;
+  font-size: .9rem;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+.btn-nuno {
+  border-color: #1EBBA3;
+  background-color: #1EBBA3;
+  color: white;
+}
+.btn-nuno:hover,
+.btn-nuno:focus {
+  border-color: #189582;
+  background-color: #189582;
+  color: white;
+}
+h3.heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.9rem;
+}
+.heading-underline {
+  width: 3rem;
+  height: .2rem;
+  background-color: #1EBBA3;
+  margin: 0 auto 2rem;
+}
+.feature span {
+  color: #1EBBA3;
+  margin-bottom: .6rem;
+}
+.feature h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding-bottom: .4rem;
+}
+
+/*===== PARALLAX BACKGROUND IMG DARK =====*/
+
+.dark-background {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 500px;
+  z-index: 1000!important;
+}
+
+/*============= PORTFOLIO SECTION =============*/
+
+.portfolio-item img:hover {
+  transform: scale(1.3);
+  cursor: zoom-in;
+}
+.portfolio-item img {
+  transition: transform .4s ease;
+}
+
+/*============= PRICING SECTION =============*/
+
+.price-flex {
+  display: flex;
+}
+.pricing-column {
+  background-color: white;
+  height: 100%;
+  padding: 1.6rem;
+  border-top: .25rem solid #1ebba3;
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+  transition: transform .7s ease;
+  overflow: hidden;
+  position: relative; /*-- Ribon --*/
+}
+.pricing-column:hover {
+  transform: scale(1.1);
+}
+.pricing-column h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.ribbon {
+  background-color: #6c757d;
+  color: white;
+  width: 10rem;
+  height: 2rem;
+  font-size: .8rem;
+  font-weight: 700;
+  padding-top: .4rem;
+  position: absolute;
+  transform: rotate(45deg);
+  right: -2.8rem;
+  top: 1.5rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, .25);
+}
+
+/*============= TEAM SECTION PARALLAX BG IMG LIGHT =============*/
+
+/*-- Team Light Background --*/
+.light-background {
+  background-color: rgba( 255, 255, 255, .75);
+  z-index: 1000!important;
+}
+.owl-stage {
+  display: flex;
+}
+.card {
+  height: 100%;
+  border-radius: 0;
+  margin: 0 1rem;
+  text-align: center;
+  border: .1rem solid rgba(0, 0, 0, .075);
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+  transition: transform .4s ease;
+  z-index: 1000!important;
+}
+.card:hover {
+  transform: scale(.95);
+}
+ul.social {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  max-width: 8rem;
+}
+ul.social li {
+  display: inline;
+  padding-right: 1rem;
+}
+.card a {
+  color: #1ebba3;
+}
+.card a:hover {
+  color: #505962;
+}
+button.owl-dot.active span,
+button.owl-dot:hover span {
+  background: #1ebba3!important;
+}
+
+/*============= SKILLS SECTION =============*/
+
+/*============= CLIENTS SECTION =============*/
+
+.owl-carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.clients img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform .3s ease;
+}
+.clients img:hover {
+  transform: scale(0.95);
+}
+blockquote .svg-inline--fa {
+  margin: 1rem;
+  color: #1EBBA3;
+}
+.clients-hr {
+  border-top: .05rem solid #1EBBA3;
+}
+
+/*============= CONTACT SECTION =============*/
+
+.footer {
+  background: url('../img/footer/footer.jpg') no-repeat;
+  /*background-color: #40474e;*/
+  background-size: cover;
+  color: white;
+}
+
+
+.footer .row.outer {
+  background-color: rgba(57, 63, 70, 0.85);
+  padding: 1rem 2rem 3rem;
+}
+.footer img {
+  height: 2rem;
+  margin: 1.5rem 0;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer ul.social {
+  float: left;
+}
+.footer .social a:hover {
+  color: #1ebba3!important;
+}
+.footer h3 {
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+/*-- Contact Form --*/
+.form-group {
+  margin-bottom: 1.3rem;
+}
+.form-control {
+  background-color: #53595f;
+  border-radius: 0;
+  border: .15rem solid #666b71;
+  color: white!important;
+  font-size: 1.1rem;
+}
+.form-control:focus {
+  background: #53595f;
+  border: .15rem solid #93979b;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b2b5b8!important;
+}
+input.btn {
+  cursor: pointer;
+}
+.controls input:focus,
+.controls textarea:focus { /*-- Remove Element Outlines in Contact Form --*/
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Socket --*/
+hr.socket {
+  border-top: .2rem solid #666b71;
+  width: 100%;
+}
+
+/*============= TOP SCROLL =============*/
+
+.top-scroll svg.svg-inline--fa {
+  font-size: 3rem;
+  height: 1.7rem;
+  color: #53595f;
+  background: white;
+}
+a.top-scroll {
+  right: 1.2rem;
+  bottom: 1.2rem;
+  position: fixed;
+  opacity: .3;
+  z-index: 1000;
+  display: none;
+}
+a.top-scroll:hover {
+  opacity: .5;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 992px (lg) */
+@media (max-width: 991.98px) {
+  .caption h1 {
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    padding-bottom: .8rem;
+  }
+  .caption h3 {
+    font-size: 2.2rem;
+    padding-bottom: 1.7rem;
+  }
+  .btn-lg {
+    padding: .7rem 1.2rem;
+    font-size: 1rem;
+  }
+  .clients img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* Devices under 768px (md) */
+@media (max-width: 767.98px) {
+  .parallax-home {
+    height: 100vh;
+    min-height: 500px;
+  }
+  .caption h1 {
+    font-size: 2.7rem;
+    letter-spacing: .15rem;
+    padding-bottom: .5rem;
+  }
+  .caption h3 {
+    font-size: 1.7rem;
+    padding-bottom: 1.2rem;
+  }
+  .btn-lg {
+    padding: .6rem 1.1rem;
+    font-size: 1rem;
+  }
+  #features h1 {
+    font-size: 2rem;
+  }
+  .fixed-dark {
+    background-image: url('../img/fixed/apple-mobile.jpg');
+  }
+  .fixed-light {
+    background-image: url('../img/fixed/office-mobile.jpg');
+  }
+  .footer {
+    background: url('../img/footer/footer-mobile.jpg') no-repeat;
+  }
+  .top-scroll {
+    display: none!important;
+  }
+}
+
+/* Devices under 576px (sm) */
+@media (max-width: 575.98px) {
+  .caption h1 {
+    font-size: 1.9rem;
+    letter-spacing: .1rem;
+    padding-bottom: .4rem;
+  }
+  .caption h3 {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+  .btn-lg {
+    padding: .4rem .9rem;
+    font-size: .9rem;
+  }
+}
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+
+/*============= WAYPOINTS =============*/
+
+/*--- OPTION: TURN OFF ANIMATION ON MOBILE --*
+
+@media (max-width: 767px) {
+.animated, .os-animation {
+  -webkit-animation: none!important;
+  -moz-animation: none!important;
+  -o-animation: none!important;
+  animation: none!important;
+  opacity: 1!important;
+  -webkit-animation-delay: none !important;
+  -moz-animation-delay: none !important;
+  animation-delay: none !important;
+  }
+}
+
+
+/*--- Prevent WayPoints from Browser Window Scrolling On Mobile --*/
+/* Devices under 768px (md) */
+@media (max-width: 767px) {
+  .row {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+/*-- Don't modify waypoints CSS below,
+this is required for waypoints to work --*/
+.os-animation{
+  opacity: 0;
+  margin: 0!important;
+  max-width: 100%;
+}
+.os-animation.animated {
+  opacity: 1;
+}
+
+/*============= UNIVERSAL PARALLAX PLUGIN CSS =============*/
+.parallax-container {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px;
+  position: relative;
+  width: 100%
+}
+.parallax-container .parallax-content {
+  margin: 0 auto;
+  width: 100%;
+}
+.parallax__container {
+  clip: rect(0, auto, auto, 0);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100
+}
+.parallax__container .parallax {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%
+}
+
+
+
+/* Botton product */
+.product-btn {
+  background-color: transparent;
+  border: 1px solid #53595f;
+  color: #53595f;
+  font-family: 'Lato', sans-serif;
+  border-radius: 40px;
+  padding: 5px 30px;
+  margin: 15px 0px;
+}
