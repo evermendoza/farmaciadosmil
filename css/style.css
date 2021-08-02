@@ -331,7 +331,7 @@ blockquote .svg-inline--fa {
 /*============= CONTACT SECTION =============*/
 
 .footer {
-  background: url('../img/footer/footer.jpg') no-repeat;
+  /* background: url('../img/footer/footer-web.jpg') no-repeat; */
   /*background-color: #40474e;*/
   background-size: cover;
   color: white;
@@ -459,9 +459,9 @@ a.top-scroll:hover {
     font-size: 2rem;
   }
 
-  .footer {
-    background: url('../img/footer/footer-mobile.jpg') no-repeat;
-  }
+  /* .footer {
+    background: url('../img/footer/footer-mobile1.jpg') no-repeat;
+  } */
   .top-scroll {
     display: none!important;
   }
